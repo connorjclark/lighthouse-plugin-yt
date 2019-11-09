@@ -32,11 +32,15 @@ class YtAudit extends Audit {
     const results = artifacts.IFrameElements
       .filter(iframe => iframe.src && new URL(iframe.src).host === 'www.youtube.com')
       .map(iframe => {
-        return {src: iframe.src};
+        const srcParts = new URL(iframe.src).pathname.split('/');
+        const videoId = srcParts[srcParts.length - 1];
+        const thumbnail = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
+        return {src: iframe.src, thumbnail};
       });
 
     /** @type {LH.Audit.Details.Table['headings']} */
     const headings = [
+      {key: 'thumbnail', itemType: 'thumbnail', text: ''},
       {key: 'src', itemType: 'url', text: 'url'},
     ];
 
