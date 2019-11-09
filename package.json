@@ -1,13 +1,12 @@
 {
   "name": "lighthouse-plugin-yt",
   "main": "plugin.js",
-  "version": "0.2.1",
-  "repository": "exterkamp/lighthouse-plugin-cinememe",
+  "version": "0.1",
+  "repository": "connorjclark/lighthouse-plugin-yt",
   "license": "Apache-2.0",
   "author": {
     "name": "Connor Clark",
-    "email": "shaneexterkamp5@gmail.com",
-    "url": "https://exterkamp.codes"
+    "email": "cjamcl@google.com",
   },
   "devDependencies": {
     "typescript": "^3.7.2"
