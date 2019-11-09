@@ -8,7 +8,7 @@ module.exports = {
 
   category: {
     title: 'YouTube',
-    description: 'Lazy loads youtube embeds',
+    description: '🚀🚀🚀 Lazy loads youtube embeds 🚀🚀🚀',
     auditRefs: [
       {id: 'yt', weight: 1},
     ],
