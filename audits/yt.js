@@ -1,6 +1,6 @@
 'use strict';
 
-const {Audit, NetworkRecords} = require('lighthouse');
+const {Audit} = require('lighthouse');
 
 /**
  * @fileoverview Audits if a page lazy loads YouTube videos.
@@ -22,13 +22,9 @@ class YtAudit extends Audit {
 
   /**
    * @param {LH.Artifacts} artifacts
-   * @param {LH.Audit.Context} context
    * @return {Promise<LH.Audit.Product>}
    */
-  static async audit(artifacts, context) {
-    // TODDO ?
-    // const devtoolsLog = artifacts.devtoolsLogs[Audit.DEFAULT_PASS];
-    // const networkRecords = await NetworkRecords.request(devtoolsLog, context);
+  static async audit(artifacts) {
     const results = artifacts.IFrameElements
       .filter(iframe => iframe.src && new URL(iframe.src).host === 'www.youtube.com')
       .map(iframe => {
