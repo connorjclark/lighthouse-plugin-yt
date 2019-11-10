@@ -12,7 +12,7 @@ class YtAudit extends Audit {
    */
   static get meta() {
     return {
-      id: 'yt',
+      id: 'yt-iframes',
       title: 'Lazy loads YouTube embeds',
       failureTitle: 'Does not load YouTube embeds',
       description: 'YouTube embeds on this page should not be loaded until the user interacts with the video. [Learn more](https://github.com/paulirish/lite-youtube-embed)',
